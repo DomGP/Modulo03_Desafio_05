@@ -22,6 +22,10 @@ header{
     margin-bottom: 1rem;
     padding: 0.5rem;
 }
+hr{
+    margin: 0 auto;
+    width: 50%;
+}
 h3{
     padding-bottom: 0.5rem;
 }
