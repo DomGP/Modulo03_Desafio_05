@@ -19,8 +19,8 @@ const render = (tareas) =>{
         `
             <tr>
                 
-                <td>${tarea.completado ? `<span style="color: green;">${tarea.id}</span>` : tarea.id}</td>
-                <td>${tarea.completado ? `<span style="color: green;">${tarea.tarea}</span>` : tarea.tarea}</td>
+                <td>${tarea.completado ? `<span class='styleRealizada'>${tarea.id}</span>` : tarea.id}</td>
+                <td>${tarea.completado ? `<span class='styleRealizada'>${tarea.tarea}</span>` : tarea.tarea}</td>
                 <td><i class="fa-solid fa-circle-check" style="color: #63E6BE;" onclick='completar(${tarea.id})'></i></td>
                 <td><i class="fa-solid fa-circle-xmark" style="color: #ff0000;" onclick='borrar(${tarea.id})'></i></td>
             </tr>
@@ -37,6 +37,9 @@ render(tareas)
 btnAgregar.addEventListener('click', () => {
     const nuevaTarea = inputTarea.value;
     const nuevoId = tareas.length > 0 ? tareas[tareas.length - 1].id + 1 : 1;
+    if(nuevaTarea === ''){
+        btnAgregar.style.disabled
+    }else
     tareas.push({ id: nuevoId, tarea: nuevaTarea, completado: false });
     inputTarea.value = ''
     render(tareas)

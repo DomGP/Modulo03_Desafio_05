@@ -13,9 +13,17 @@ body{
 nav{
     text-align: center;
 }
+h1{
+    padding: 0.5em;
+    font-size: 3em;
+}
 header{
     text-align: center;
     margin-bottom: 1rem;
+    padding: 0.5rem;
+}
+h3{
+    padding-bottom: 0.5rem;
 }
 input{
     padding: 0.5em;
@@ -43,6 +51,13 @@ table{
 }
 th, td{
     border: 1px solid #ddd;
-    padding: 0.3rem;
+    padding: 0.5rem;
     text-align: center;
+}
+.styleRealizada{
+    color:rgb(7, 175, 7);
+    font-weight:700;
+}
+td i{
+    cursor: pointer;
 }
