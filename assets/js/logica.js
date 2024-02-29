@@ -9,9 +9,9 @@ const contadorTarea = document.getElementById('contadorTareas') //Etiqueta donde
 const contadorTareaLista = document.getElementById('contadorRealizadas') //Etiqueta donde aparece el total de tareas realizadas
 
 const tareas = [
-    {id: 604, tarea: 'Realizar el Desafio', completado: false },
-    {id: 605, tarea: 'Realizar el Desafio', completado: false },
-    {id: 606, tarea: 'Realizar el Desafio', completado: false },
+    {id: 604, tarea: 'Realizar el Desafío', completado: false },
+    {id: 605, tarea: 'Estudiar JS', completado: false },
+    {id: 606, tarea: 'Estudiar para el desafío de la próxima semana', completado: false },
 ]
 
 const render = (tareas) =>{
@@ -22,7 +22,7 @@ const render = (tareas) =>{
             <tr>
                 
                 <td>${tarea.completado ? `<span class='styleRealizada'>${tarea.id}</span>` : tarea.id}</td>
-                <td>${tarea.completado ? `<span class='styleRealizada'>${tarea.tarea}</span>` : tarea.tarea}</td>
+                <td class='styleTareas'>${tarea.completado ? `<span class='styleRealizada'>${tarea.tarea}</span>` : tarea.tarea}</td>
                 <td>${tarea.completado ? `<i class="fa-regular fa-circle" style="color: #63E6BE;" onclick='completar(${tarea.id})'></i>` : `<i class="fa-solid fa-circle-check" style="color: #63E6BE;" onclick='completar(${tarea.id})'></i>` }</td>
                 <td><i class="fa-solid fa-circle-xmark" style="color: #ff0000;" onclick='borrar(${tarea.id})'></i></td>
             </tr>

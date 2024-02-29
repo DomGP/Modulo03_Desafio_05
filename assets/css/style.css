@@ -79,6 +79,10 @@ th, td{
     color:rgb(7, 175, 7);
     font-weight:700;
 }
+.styleTareas{
+    text-wrap: wrap;
+    max-width: 250px;
+}
 td i{
     cursor: pointer;
 }
