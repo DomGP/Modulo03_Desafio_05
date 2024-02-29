@@ -1,6 +1,8 @@
 const inputTarea = document.getElementById('inputTarea') //Input donde se anotan las tareas
 const btnAgregar = document.getElementById('btnTarea') //Boton para agregar las tareas
 const body = document.querySelector('tbody') //Etiqueta donde aparecen las nuevas tareas
+const alerta = document.getElementById('alertMensaje') //Mensaje de input en blanco
+
 
 //Variables contadores
 const contadorTarea = document.getElementById('contadorTareas') //Etiqueta donde aparece el total de tareas
@@ -39,10 +41,16 @@ btnAgregar.addEventListener('click', () => {
     const nuevoId = tareas.length > 0 ? tareas[tareas.length - 1].id + 1 : 1;
     if(nuevaTarea === ''){
         btnAgregar.style.disabled
-    }else
-    tareas.push({ id: nuevoId, tarea: nuevaTarea, completado: false });
-    inputTarea.value = ''
+        alert('Debes agregar una tarea')
+        let mensaje = `<p class= 'alertaMensaje'>Debes agregar una tarea</p>`
+        alerta.innerHTML = mensaje
+    }else {
+        tareas.push({ id: nuevoId, tarea: nuevaTarea, completado: false });
+        alerta.innerHTML = ''
+        inputTarea.value = ''
+    }
     render(tareas)
+    
 })
 
 const borrar = (id) =>{

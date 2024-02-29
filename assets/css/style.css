@@ -53,6 +53,10 @@ input{
 .btnAgregar:active{
     background-color: lightpink;
 }
+.alertaMensaje{
+    color: red;
+    margin-right: 5em;
+}
 aside{
     display: flex;
     justify-content: center;
