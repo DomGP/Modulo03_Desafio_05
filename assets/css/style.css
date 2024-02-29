@@ -56,7 +56,9 @@ input{
 }
 .alertaMensaje{
     color: red;
-    margin-right: 5em;
+    margin-right: 4.6em;
+    font-weight:600;
+    padding-top: 0.1rem;
 }
 aside{
     display: flex;
@@ -86,6 +88,9 @@ td i{
     padding: 2rem;
     box-shadow: rgba(3, 37, 76, 0.25) 0px 14px 28px, rgba(3, 37, 76, 0.22) 0px 10px 10px;
     border-radius: 10%;
+}
+.numberBold{
+    font-weight: bold ;
 }
 
 /* RGB(3, 37, 76) */

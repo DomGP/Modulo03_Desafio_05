@@ -31,8 +31,8 @@ const render = (tareas) =>{
         
     })
     body.innerHTML = html
-    contadorTarea.textContent = `Total de tareas: ${tareas.length}`
-        contadorTareaLista.textContent = ` Tareas Realizadas: ${tareas.filter(tarea => tarea.completado).length}`
+    contadorTarea.innerHTML = `Total de tareas: <span class='numberBold'>${tareas.length}</span>`
+    contadorTareaLista.innerHTML = ` Tareas Realizadas: <span class='numberBold'>${tareas.filter(tarea => tarea.completado).length}</span>`
 }
 render(tareas)
 
