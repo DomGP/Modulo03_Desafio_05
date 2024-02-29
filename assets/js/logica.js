@@ -21,7 +21,7 @@ const render = (tareas) =>{
                 
                 <td>${tarea.completado ? `<span class='styleRealizada'>${tarea.id}</span>` : tarea.id}</td>
                 <td>${tarea.completado ? `<span class='styleRealizada'>${tarea.tarea}</span>` : tarea.tarea}</td>
-                <td><i class="fa-solid fa-circle-check" style="color: #63E6BE;" onclick='completar(${tarea.id})'></i></td>
+                <td>${tarea.completado ? `<i class="fa-regular fa-circle" style="color: #63E6BE;" onclick='completar(${tarea.id})'></i>` : `<i class="fa-solid fa-circle-check" style="color: #63E6BE;" onclick='completar(${tarea.id})'></i>` }</td>
                 <td><i class="fa-solid fa-circle-xmark" style="color: #ff0000;" onclick='borrar(${tarea.id})'></i></td>
             </tr>
         `
@@ -53,7 +53,7 @@ const borrar = (id) =>{
 
 const completar = (id) => {
     const indexCompletar = tareas.findIndex((ele) => ele.id == id)
-    tareas[indexCompletar].completado = !tareas[indexCompletar.completado]
-    console.log(tareas)
+    /* tareas[indexCompletar].completado = !tareas[indexCompletar.completado] */
+    tareas[indexCompletar].completado = !tareas[indexCompletar].completado;
     render(tareas)
 }
