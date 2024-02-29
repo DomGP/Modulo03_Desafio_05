@@ -41,7 +41,7 @@ btnAgregar.addEventListener('click', () => {
     const nuevoId = tareas.length > 0 ? tareas[tareas.length - 1].id + 1 : 1;
     if(nuevaTarea === ''){
         btnAgregar.style.disabled
-        alert('Debes agregar una tarea')
+        /* alert('Debes agregar una tarea') */
         let mensaje = `<p class= 'alertaMensaje'>Debes agregar una tarea</p>`
         alerta.innerHTML = mensaje
     }else {
